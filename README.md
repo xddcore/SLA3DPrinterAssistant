@@ -28,6 +28,8 @@
 
 https://github.com/lhelontra/tensorflow-on-arm
 
+https://qengineering.eu/install-tensorflow-2.7-on-raspberry-64-os.html (强力推荐，更新版本的wheel)
+
 2. Tensorflow io For Raspi
 
 https://github.com/tensorflow/io
