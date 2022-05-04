@@ -30,7 +30,7 @@ https://github.com/lhelontra/tensorflow-on-arm
 
 2. Tensorflow io For Raspi
 
-'''
+```
 # get a fresh start
 $ sudo apt-get update
 $ sudo apt-get upgrade
@@ -50,7 +50,7 @@ $ git clone https://github.com/Qengineering/Tensorflow-io.git
 $ cd Tensorflow-io
 $ sudo -H pip3 install tensorflow_io_gcs_filesystem-0.23.1-cp39-cp39-linux_aarch64.whl
 $ cd ~
-'''
+```
 
 # 项目技术细节
 
