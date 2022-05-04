@@ -22,6 +22,36 @@
 2. 数据集不够丰富以及用于训练的数据集不够多(标定不完了，太多了)。根据实验，神经网络计算和信号的能量，频率分布以及出现的时间(也就是frame index,(H Axis))都有关。
 3. 不知道为啥stft的库，Fs = 16000，step = 512，用tf_IO出来的应该是frame = 30。然后树莓派上没有tf_IO,所以我用了另外一个库，出来的就是frame = 35.然后我直接[:30]，裁出了前30个frame。
 
+# 关键Packet安装
+
+1. Tensorflow For Raspi
+
+https://github.com/lhelontra/tensorflow-on-arm
+
+2. Tensorflow io For Raspi
+
+'''
+# get a fresh start
+$ sudo apt-get update
+$ sudo apt-get upgrade
+# install pip3
+$ sudo apt-get install git python3-pip
+Method 1
+# download tensorflow io
+$ git clone -b v0.23.1 --depth=1 --recursive https://github.com/tensorflow/io.git
+$ cd io
+$ python3 setup.py -q bdist_wheel --project tensorflow_io_gcs_filesystem
+$ cd dist
+$ sudo -H pip3 install tensorflow_io_gcs_filesystem-0.23.1-cp39-cp39-linux_aarch64.whl
+$ cd ~
+Method 2
+# or download wheel
+$ git clone https://github.com/Qengineering/Tensorflow-io.git
+$ cd Tensorflow-io
+$ sudo -H pip3 install tensorflow_io_gcs_filesystem-0.23.1-cp39-cp39-linux_aarch64.whl
+$ cd ~
+'''
+
 # 项目技术细节
 
 ## 1. 硬件实现
